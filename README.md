@@ -32,10 +32,10 @@ def linear_regression(X1, y, learning_rate=0.1, num_iters=1000):
     return theta
 data=pd.read_csv("50_Startups.csv")
 data.head()
-
+```
 <img width="826" height="311" alt="Screenshot 2026-04-28 140901" src="https://github.com/user-attachments/assets/e651c910-0878-4528-8a05-0dba292cecae" />
 
-
+```
 X=(data.iloc[1:,:-2].values)
 X1=X.astype(float)
 
@@ -44,14 +44,14 @@ y=(data.iloc[1:,-1].values).reshape(-1,1)
 X1_Scaled=scaler.fit_transform(X1)
 Y1_Scaled=scaler.fit_transform(y)
 print(X)
-
+```
 <img width="258" height="826" alt="Screenshot 2026-04-28 140943" src="https://github.com/user-attachments/assets/898b7127-a666-419a-900c-cba765c483c7" />
 
-
+```
 print(X1_Scaled)
-
+```
 <img width="378" height="818" alt="Screenshot 2026-04-28 141008" src="https://github.com/user-attachments/assets/4026a30f-54aa-4b38-bec2-c543651b9c65" />
-
+```
 
 theta=linear_regression(X1_Scaled, Y1_Scaled)
 new_data= np.array([165349.2 , 136897.8 , 471784.1]).reshape(-1,1)
@@ -61,7 +61,7 @@ prediction= prediction.reshape(-1,1)
 pre = scaler.inverse_transform(prediction)
 print(prediction)
 print(f"Predicted value: {pre}")
-
+```
 <img width="286" height="48" alt="Screenshot 2026-04-28 141028" src="https://github.com/user-attachments/assets/6c96628b-9fd5-456e-b15a-ecff9439e757" />
 
 
