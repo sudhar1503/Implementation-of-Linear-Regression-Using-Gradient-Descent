@@ -33,7 +33,8 @@ def linear_regression(X1, y, learning_rate=0.1, num_iters=1000):
 data=pd.read_csv("50_Startups.csv")
 data.head()
 
-<img width="651" height="243" alt="image" src="https://github.com/user-attachments/assets/62edbf65-3314-4ad0-a84d-4e3c02fda19d" />
+<img width="826" height="311" alt="image" src="https://github.com/user-attachments/assets/6a39736a-3af8-406c-bf15-318837cc16fa" />
+
 
 X=(data.iloc[1:,:-2].values)
 X1=X.astype(float)
@@ -43,12 +44,13 @@ y=(data.iloc[1:,-1].values).reshape(-1,1)
 X1_Scaled=scaler.fit_transform(X1)
 Y1_Scaled=scaler.fit_transform(y)
 print(X)
+<img width="258" height="826" alt="image" src="https://github.com/user-attachments/assets/a061fd62-cae6-43f0-9329-38b6cc208c6d" />
 
-<img width="271" height="871" alt="image" src="https://github.com/user-attachments/assets/5d46629c-d0c6-4699-a34a-a012f0eb43e4" />
 
 print(X1_Scaled)
 
-<img width="397" height="869" alt="image" src="https://github.com/user-attachments/assets/337b42e7-738a-403a-bb06-0b38bceb7280" />
+<img width="378" height="818" alt="image" src="https://github.com/user-attachments/assets/29ae31df-b393-4ce3-b07d-053eddb26191" />
+
 
 theta=linear_regression(X1_Scaled, Y1_Scaled)
 new_data= np.array([165349.2 , 136897.8 , 471784.1]).reshape(-1,1)
@@ -59,7 +61,8 @@ pre = scaler.inverse_transform(prediction)
 print(prediction)
 print(f"Predicted value: {pre}")
 
-<img width="294" height="50" alt="image" src="https://github.com/user-attachments/assets/aba95e7d-89e7-4326-8c7c-d0f013b6b725" />
+<img width="286" height="48" alt="image" src="https://github.com/user-attachments/assets/ce739bb9-eaf9-4d47-8af0-b93459b888da" />
+
 
 
 
